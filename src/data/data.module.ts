@@ -1,9 +1,11 @@
+import { HttpModule } from '@nestjs/axios';
 import { Module } from '@nestjs/common';
 import { DataController } from './data.controller';
 import { DataService } from './data.service';
 
 @Module({
+  imports: [HttpModule],
   controllers: [DataController],
-  providers: [DataService]
+  providers: [DataService],
 })
 export class DataModule {}
