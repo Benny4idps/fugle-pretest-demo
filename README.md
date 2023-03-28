@@ -5,8 +5,10 @@ This is a pretest demo for Fugle.co
 ## Features
 
 * GET API: Fetch data from /data?user=userId route, if fail throws 500 error
+
 * Rate limiting: Maximum request attempt for the same user & IP within 1 minute (user: 5, IP: 10)
-* Websocket API: "subscribe" event for getting the latest trade price of prefixed 10 currencies by calling [Bitstamp websocket API](https://www.bitstamp.net/websocket/v2/)
+
+* Websocket API: "subscribe" event for getting the latest trade price of prefixed 10 currencies from [Bitstamp websocket API](https://www.bitstamp.net/websocket/v2/), receive latest trade data by listening "message" event
 
 ## Installing
 
