@@ -21,6 +21,9 @@ export class RateLimitGuard implements CanActivate {
     if (!userId) {
       throw new BadRequestException('userId required');
     }
+    if (isNaN(userId) || userId < 1 || userId > 1000) {
+      throw new BadRequestException('userId unavailable');
+    }
 
     const userRequestRate = await this.cacheService.checkRateLimit(
       RateLimitTypeEnum.User,
